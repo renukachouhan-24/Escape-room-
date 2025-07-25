@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escape Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="room1">
+        <h2>Escape the Room</h2>
+        <p>You're locked in a mysterious facility. Solve puzzles, find keys, and escape before time runs out!</p>
+        <div>
+            <li>3 challenging rooms to explore</li>
+            <li>5 minutes to complete your escape</li>
+            <li>Earn points and collect keys</li>
+            <li>Use hints wisely - you only get 3!</li>
+        </div>
+        <button onclick="entergame()" class="startbtn">Start Your Escape</button>
+    </div>
+
+    <div class="room2" style="display: none;" >
+        <div class="innerroom">
+            <b>Room 1</b>
+            <p class="innerp" id="time">Time</p>
+            <p class="innerp" id="score">Score</p>
+            <p class="innerp" id="lock">Lock</p>
+            <p class="innerp" id="hints">Hints</p>
+        </div>
+        <button class="resetbtn">Reset Game</button>
+    </div>
+
+    <div id="main1" class="maindiv" style="display: none;">
+        <div class="box1">Game Started you have 5 minutes to escape!</div>
+        <div class="box2">
+            <div class="box21">Room1</div>
+            <div class="box21">Room2</div>
+            <div class="box21">Final Room</div>
+        </div>
+        <div class="box3">
+            <h2>The Beginning</h2>
+            <p>You wake up in a dimly lit room. The door is locked tight, and you can hear the second of machinery
+                humming in the distance. On the wall, you notice some writing and what appears to be an electronic lock.
+                You need to find the password to get out of here! </p>
+        </div>
+        <div class="box4">
+            <div class="box41">
+                <h3>Electronic Door Lock</h3>
+                <p>Enter the secret password to unlock the door:</p>
+                <div>
+                    <input placeholder="Enter password">
+                    <button class="btn41">Unlock</button>
+                </div>
+                <a>Use Hint</a>
+            </div>
+            <div class="box41">
+                <h3>Security Console</h3>
+                <p>A secondary security system requires you to solve this equation:</p>
+                <div class="questionbox"> What's 3*7+1?</div>
+                <div>
+                    <input placeholder="Enter answer..">
+                    <button class="btn41">Submit</button>
+                </div>
+                <a>Use Hint</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="maindiv" style="display: none;">
+        <div class="box2">
+            <div class="box21">Room1</div>
+            <div class="box21">Room2</div>
+            <div class="box21">Final Room</div>
+        </div>
+        <div class="box3">
+            <h2>The Laboratory</h2>
+            <p>You enter a high tech laboratory filled with strange equipment. Computer terminals line the walls, and you notice a sequence of colored buttons that seem to be part of some kind of lock mechanism. There's also an ancient riddle carved into the wall...</p>
+        </div>
+        <div class="box4">
+            <div class="room2box41">
+                <h3>Sequence Lock</h3>
+                <p>Press the buttons in the correct sequence. A pattern glows faintly on the wall... </p>
+                <div>
+                    <button class="btn1">1</button>
+                    <button class="btn2">2</button>
+                    <button class="btn3">3</button>
+                </div>
+                <p>Sequence: None yet</p>
+                <a>Use Hint</a>
+            </div>
+            <div class="room2box41">
+                <h3>Ancient Riddle</h3>
+                <div class="questionbox2">I have hands but cannot hold,<br>I have a face but am not bold.<br>I tell you things without speaking,<br>What am I that you're seeking?</div>
+                <p>Hover here for a clue: "It ticks and tocks, showing the time..."</p>
+                <div>
+                    <input placeholder="What am I?">
+                    <button class="btn41">Answer</button>
+                </div>
+                <a>Use Hint</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
