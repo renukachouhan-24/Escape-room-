@@ -6,9 +6,21 @@ function entergame() {
 
     startbtn.addEventListener("click", () => {
         room1.style.display = "none";
-        room2.style.display = "block";
-        main1.style.display = "block";
+        room2.style.display = "flex";
+        main1.style.display = "flex";
     });
 }
 
 entergame();
+
+function finallyroom2(){
+    const roombox2 = document.querySelector("#roombox2");
+    const main1 = document.querySelector("#main1")
+    const main2 = document.querySelector("#main2")
+
+    roombox2.addEventListener("click", () =>{
+        main1.style.display = "none";
+        main2.style.display = "flex";
+    })
+}
+finallyroom2()
